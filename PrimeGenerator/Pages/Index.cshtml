@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1> Find your prime </h1>
+
+
+<form method="get">
+
+    <a href="https://en.wikipedia.org/wiki/Palindromic_prime">Palindrome prime</a>:
+    <input type="checkbox" name="IsPalindrome" asp-for="IsPalindrome">
+    <br />
+
+    <a href="https://en.wikipedia.org/wiki/Circular_prime"> Circular prime</a>:
+    <input type="checkbox" name="IsCircular" asp-for="IsPalindrome">
+    <br />
+
+    <a href="https://en.wikipedia.org/wiki/Truncatable_prime"> Right truncatable prime</a>:
+    <input type="checkbox" name="IsRightTruncatable" asp-for="IsRightTruncatable">
+    <br />
+    
+    <input type="submit">
+</form>
+
+<h2> Found Prime:@Model.Prime </h2>
